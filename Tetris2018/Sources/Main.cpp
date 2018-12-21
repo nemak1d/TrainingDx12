@@ -4,6 +4,8 @@
 
 #include "DX12.h"
 
+using N1D::Graphic::DX12;
+
 static DX12* pGraphic = nullptr;
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
@@ -107,9 +109,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 	
 	pGraphic->Destroy();
-	//pGraphic = nullptr;
-
-
 
 	return (UINT)message.wParam;
 }
