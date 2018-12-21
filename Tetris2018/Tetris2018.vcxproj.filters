@@ -29,5 +29,8 @@
     <ClInclude Include="Sources\d3dx12.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Sources\HrException.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
