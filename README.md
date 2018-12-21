@@ -2,7 +2,6 @@
 C++書くリハビリ。せっかくなのでDx12に挑戦。
 
 ## Lisence
-部分的に拝借しております。。。
 
 Copyright 2018 Microsoft.
 
