@@ -2,7 +2,10 @@
 #include <locale.h>
 #include <d3d12.h>
 
+#include "Log.h"
 #include "DX12.h"
+#include "HeapFactory.h"
+#include "GameObject.h"
 
 using N1D::Graphic::DX12;
 
@@ -59,6 +62,10 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+	int bookmark = N1D::HeapFactory::GetMemoryBookmark();
+
+	N1D::GameObject* obj = new N1D::GameObject;
+
 	WNDCLASS windowClass;
 	windowClass.style = CS_HREDRAW | CS_VREDRAW;
 	windowClass.lpfnWndProc = WndProc;
@@ -109,6 +116,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 	
 	pGraphic->Destroy();
+
+	SafeDelete(obj);
+	N1D::HeapFactory::PrintInfo();
+
+	N1D::HeapFactory::ReportMemoryLeaks(bookmark);
 
 	return (UINT)message.wParam;
 }

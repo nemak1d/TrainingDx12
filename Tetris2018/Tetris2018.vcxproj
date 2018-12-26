@@ -152,12 +152,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Sources\DX12.cpp" />
+    <ClCompile Include="Sources\GameObject.cpp" />
+    <ClCompile Include="Sources\Heap.cpp" />
+    <ClCompile Include="Sources\HeapFactory.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\MemoryAllocator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sources\d3dx12.h" />
     <ClInclude Include="Sources\DX12.h" />
+    <ClInclude Include="Sources\GameObject.h" />
+    <ClInclude Include="Sources\Heap.h" />
+    <ClInclude Include="Sources\HeapFactory.h" />
     <ClInclude Include="Sources\HrException.h" />
+    <ClInclude Include="Sources\Log.h" />
+    <ClInclude Include="Sources\MemoryAllocator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
