@@ -8,6 +8,7 @@
 #include <assert.h>
 
 #include "Heap.h"
+#include "Log.h"
 
 using namespace N1D;
 
@@ -173,7 +174,7 @@ namespace N1D
 	{
 		for (int i = 0; i < indentLevel; ++i)
 		{
-			printf(" ");
+			Log::Write(" ");
 		}
 
 		size_t totalBytes = 0;
@@ -182,7 +183,7 @@ namespace N1D
 		GetTreeStats(totalBytes, totalPeakBytes, totalInstances);
 		
 		int spacing = 20 - indentLevel * 2;
-		printf("%-*s %6d %6d %5d  %6d %6d %5d\n",
+		Log::Write("%-*s %6d %6d %5d  %6d %6d %5d\n",
 			spacing, _name,
 			static_cast<int>(_allocatedBytes), static_cast<int>(_peakBytes), static_cast<int>(_instances),
 			static_cast<int>(totalBytes), static_cast<int>(totalPeakBytes), static_cast<int>(totalInstances));
@@ -218,7 +219,7 @@ namespace N1D
 			if (pHeader->allocatedCount >= bookmark1
 				&& pHeader->allocatedCount < bookmark2)
 			{
-				printf_s("Leak in %s. Size: %d, address: 0x%0Xd\n",
+				Log::Write("Leak in %s. Size: %d, address: 0x%0Xd\n",
 					_name, pHeader->size, (reinterpret_cast<char*>(pHeader) + sizeof(AllocHeader)));
 				++leaks;
 			}

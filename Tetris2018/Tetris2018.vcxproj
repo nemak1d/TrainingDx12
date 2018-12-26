@@ -165,6 +165,7 @@
     <ClInclude Include="Sources\Heap.h" />
     <ClInclude Include="Sources\HeapFactory.h" />
     <ClInclude Include="Sources\HrException.h" />
+    <ClInclude Include="Sources\Log.h" />
     <ClInclude Include="Sources\MemoryAllocator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

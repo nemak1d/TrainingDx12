@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include "HeapFactory.h"
 #include "Heap.h"
+#include "Log.h"
 
 namespace N1D
 {
@@ -77,11 +78,11 @@ namespace N1D
 
 	void HeapFactory::PrintInfo()
 	{
-		printf_s("Memory Infomation\n");
-		printf_s("                                  Local                   Total\n");
-		printf_s("Name                      Memory  Peak  Inst      Memory  Peak  Inst\n");
+		Log::Write("Memory Infomation\n");
+		Log::Write("                                  Local                   Total\n");
+		Log::Write("Name                      Memory  Peak  Inst      Memory  Peak  Inst\n");
 		GetRootHeap()->PrintTreeInfo(0);
-		printf_s("\n");
+		Log::Write("\n");
 	}
 
 	int HeapFactory::GetMemoryBookmark()
@@ -107,11 +108,11 @@ namespace N1D
 
 		if (0 < leaks)
 		{
-			printf_s("%d memory leaks found\n", leaks);
+			Log::Write("%d memory leaks found\n", leaks);
 		}
 		else
 		{
-			printf_s("No memory leaks detected.\n");
+			Log::Write("No memory leaks detected.\n");
 		}
 	}
 

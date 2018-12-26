@@ -56,5 +56,8 @@
     <ClInclude Include="Sources\MemoryAllocator.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Sources\Log.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

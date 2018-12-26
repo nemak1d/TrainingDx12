@@ -10,6 +10,25 @@ namespace N1D
 {
 	class Heap;
 	class HeapFactory;
+
+	template<typename T>
+	inline void SafeDelete(T*& p)
+	{
+		if (nullptr != p)
+		{
+			delete p;
+			p = nullptr;
+		}
+	}
+	template<typename T>
+	inline void SafeDeleteArray(T*& p)
+	{
+		if (nullptr != p)
+		{
+			delete[] p;
+			p = nullptr;
+		}
+	}
 }
 using N1D::Heap;
 using N1D::HeapFactory;
