@@ -62,7 +62,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	N1D::Log::Write("test %d %s\n", 10, "‚Ë‚Þ‚·‚¬‚í‚ë‚½");
 	int bookmark = N1D::HeapFactory::GetMemoryBookmark();
 
 	N1D::GameObject* obj = new N1D::GameObject;
